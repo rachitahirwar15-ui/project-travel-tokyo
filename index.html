@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tokyo, Japan — Travel Guide</title>
+  <style>
+    * { margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+      background: #030304;
+      color: #e8e6e0;
+      font-family: 'Segoe UI';
+      line-height: 1.7;
+      margin: 0;
+      background: url('tomoko-uji-OrKxMmp3MZI-unsplash.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2.5rem;
+      border-bottom: 0.5px solid #1e1e20;
+      position:sticky;
+      top: 0;
+      background: #0c0c0d;
+      z-index: 100;
+    }
+    nav .logo {
+      font-size: 14px;
+      font-weight: 500;
+      color: #888780;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul a {
+      text-decoration: none;
+      font-size: 13px;
+      color: #5F5E5A;
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: #e8e6e0; }
+    
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 0.5px solid #1e1e20;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 240px;
+      opacity: 0.05;
+      color: #fff;
+      pointer-events: none;
+      user-select: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #888780;
+      border: 0.5px solid #2c2c2a;
+      border-radius: 99px;
+      padding: 4px 16px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 500;
+      color: #f0ede6;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span { color: #888780; }
+    .hero p {
+      font-size: 16px;
+      color: #888780;
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat .val { font-size: 22px; font-weight: 500; color: #f0ede6; }
+    .hero-stat .lbl {
+      font-size: 11px;
+      color: #444441;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+    .stat-divider {
+      width: 0.5px;
+      height: 44px;
+      background: #2a2a2e;
+      align-self: center;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #444441;
+      margin-bottom: 1.5rem;
+    }
+    hr.sep {
+      border: none;
+      border-top: 0.5px solid #1a1a1c;
+      max-width: 100%;
+    }
+    
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 12px;
+    }
+    .hl-card {
+      background: #111113;
+      border: 0.5px solid #222224;
+      border-radius: 12px;
+      padding: 1.4rem;
+      transition: border-color 0.2s;
+    }
+    .hl-card:hover { border-color: #444441; }
+    .hl-card .icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: #1a1a1c;
+      border: 0.5px solid #2a2a2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-bottom: 1rem;
+    }
+
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 10px;
+    }
+    .gal-item {
+      background: #111113;
+      border: 0.5px solid #1e1e20;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 2rem 1rem;
+      font-size: 11px;
+      color: #444441;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+      transition: 0.4s;
+
+    }
+    .gal-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+}
+
+    .gal-item:hover { border-color: #333335; transform: scale(1.05); }
+    .gal-item.tall { grid-row: span 2; }
+    .gal-item .gi { font-size: 32px; opacity: 0.45; }
+
+     footer {
+      text-align: center;
+      padding: 1rem;
+      border: 0.5px solid #1a1a1c;
+      font-size: 12px;
+      color: #444441;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Travel Guide</div>
+    <ul>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#itinerary">Itinerary</a></li>
+      <li><a href="#info">Info</a></li>
+    </ul>
+  </nav>
+
+  
+  <div class="hero">
+    <div class="hero-bg">東京</div>
+    <div class="hero-tag">Destination Guide</div>
+    <h1>Tokyo, <span>Japan</span></h1>
+    <p>Where ancient shrines stand in the shadow of neon towers. A city that never sleeps, never repeats itself.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="val">13.96M</div>
+        <div class="lbl">Population</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <div class="val">+9 hrs</div>
+        <div class="lbl">IST Offset</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <div class="val">¥ JPY</div>
+        <div class="lbl">Currency</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <div class="val">Mar - May</div>
+        <div class="lbl">Best Time</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sep">
+
+  
+  <section id="highlights">
+    <div class="section-label">Top highlights</div>
+    <div class="highlights">
+      <div class="hl-card">
+        <div class="icon">⛩</div>
+        <h3>Senso-ji Temple</h3>
+        <p>Tokyo's oldest temple in Asakusa. Visit at dawn to see it draped in mist and silence.</p>
+      </div>
+      <div class="hl-card">
+        <div class="icon">🗼</div>
+        <h3>Tokyo Tower</h3>
+        <p>An orange iron icon glowing against the night sky. Best seen from Shiba Park below.</p>
+      </div>
+      <div class="hl-card">
+        <div class="icon">🍜</div>
+        <h3>Shinjuku Ramen Alleys</h3>
+        <p>Narrow lantern-lit lanes packed with tiny ramen shops serving bowls of liquid perfection.</p>
+      </div>
+      <div class="hl-card">
+        <div class="icon">🌸</div>
+        <h3>Ueno Park</h3>
+        <p>A sea of cherry blossoms every spring. The whole city gathers here under pink canopies.</p>
+      </div>
+      <div class="hl-card">
+        <div class="icon">🎮</div>
+        <h3>Akihabara</h3>
+        <p>The electric town — anime, manga, retro games, and blinking arcades stacked six floors high.</p>
+      </div>
+      <div class="hl-card">
+        <div class="icon">🏯</div>
+        <h3>Edo Castle Ruins</h3>
+        <p>The heart of old Tokyo. Stone moats, ancient walls, and the silence of centuries past.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="sep">
+
+  <section id="gallery">
+    <div class="section-label">Photo gallery</div>
+    <div class="gallery">
+      <div class="gal-item tall">
+        <img src="Yuto Yamada's post｜Scramble crossingCanon eos 5d + ef24-70mm f2_8 Lightroom｜【Online GoTo Travel】【Sightseeing】【Great view】【Travel】【Instagrammable】【Japan】【Kanto region】【Nightscape】【Tokyo】【Architecture】｜COOL JAPAN V.jpeg">
+        <span>Shibuya Crossing</span>
+      </div>
+      <div class="gal-item">
+        <img src="1.4.jpg">
+        <span>Senso-ji</span>
+      </div>
+      <div class="gal-item">
+        <img src="1.3.jpg">
+        <span>Cherry Blossoms</span>
+      </div>
+      <div class="gal-item">
+       <img src="1.1.jpg">
+        <span>Tsukiji Market</span>
+      </div>
+      <div class="gal-item">
+        <img src="1.jpg">
+        <span>Mount Fuji View</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- INFO -->
+  <section id="info">
+    <div class="section-label">Travel info</div>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-lbl">Language</div>
+        <div class="info-val">Japanese</div>
+        <div class="info-sub">English signage in tourist areas</div>
+      </div>
+      <div class="info-card">
+        <div class="info-lbl">Getting around</div>
+        <div class="info-val">JR Pass + Metro</div>
+        <div class="info-sub">Buy a Suica card on arrival</div>
+      </div>
+      <div class="info-card">
+        <div class="info-lbl">Budget (per day)</div>
+        <div class="info-val">¥8,000 – 15,000</div>
+        <div class="info-sub">Mid-range traveller</div>
+      </div>
+      <div class="info-card">
+        <div class="info-lbl">Visa</div>
+        <div class="info-val">On Arrival</div>
+        <div class="info-sub">Indian passport — check current rules</div>
+      </div>
+      <div class="info-card">
+        <div class="info-lbl">Climate</div>
+        <div class="info-val">Humid subtropical</div>
+        <div class="info-sub">Winters cold, summers hot & humid</div>
+      </div>
+      <div class="info-card">
+        <div class="info-lbl">Must eat</div>
+        <div class="info-val">Ramen, Sushi, Takoyaki</div>
+        <div class="info-sub">Convenience stores are underrated</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Tokyo Travel Guide &nbsp; | &nbsp; Made by Rachit Ahirwar
+  </footer>
+
+</body>
+</html>
