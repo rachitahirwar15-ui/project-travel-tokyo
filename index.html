@@ -31,23 +31,10 @@
     }
     nav .logo {
       font-size: 14px;
-      font-weight: 500;
       color: #888780;
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-    nav ul a {
-      text-decoration: none;
-      font-size: 13px;
-      color: #5F5E5A;
-      transition: color 0.2s;
-    }
-    nav ul a:hover { color: #e8e6e0; }
     
     .hero {
       text-align: center;
@@ -67,18 +54,6 @@
       color: #fff;
       pointer-events: none;
       user-select: none;
-    }
-    .hero-tag {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #888780;
-      border: 0.5px solid #2c2c2a;
-      border-radius: 99px;
-      padding: 4px 16px;
-      margin-bottom: 1.5rem;
     }
     .hero h1 {
       font-size: 56px;
@@ -160,46 +135,6 @@
       font-size: 18px;
       margin-bottom: 1rem;
     }
-
-    
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto auto;
-      gap: 10px;
-    }
-    .gal-item {
-      background: #111113;
-      border: 0.5px solid #1e1e20;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 2rem 1rem;
-      font-size: 11px;
-      color: #444441;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      transition: border-color 0.2s;
-      position: relative;
-      overflow: hidden;
-      transition: 0.4s;
-
-    }
-    .gal-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      inset: 0;
-}
-
-    .gal-item:hover { border-color: #333335; transform: scale(1.05); }
-    .gal-item.tall { grid-row: span 2; }
-    .gal-item .gi { font-size: 32px; opacity: 0.45; }
-
      footer {
       text-align: center;
       padding: 1rem;
@@ -215,34 +150,11 @@
   <nav>
     <div class="logo">Travel Guide</div>
   </nav>
-
   
   <div class="hero">
     <div class="hero-bg">東京</div>
-    <div class="hero-tag">Destination Guide</div>
     <h1>Tokyo, <span>Japan</span></h1>
     <p>Where ancient shrines stand in the shadow of neon towers. A city that never sleeps, never repeats itself.</p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="val">13.96M</div>
-        <div class="lbl">Population</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="hero-stat">
-        <div class="val">+9 hrs</div>
-        <div class="lbl">IST Offset</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="hero-stat">
-        <div class="val">¥ JPY</div>
-        <div class="lbl">Currency</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="hero-stat">
-        <div class="val">Mar - May</div>
-        <div class="lbl">Best Time</div>
-      </div>
-    </div>
   </div>
 
   <hr class="sep">
